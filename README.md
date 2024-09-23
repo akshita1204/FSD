@@ -1,2 +1,1 @@
-# FSD
-Full Stack Training 
+Created by AKshita Tyagi
