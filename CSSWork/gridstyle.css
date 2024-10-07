@@ -1,0 +1,107 @@
+body
+{
+    background-color: white
+}
+ul li
+{
+  list-style: none;
+  display: inline;
+  padding: 20px;
+}
+li:hover{
+  background-color: rgb(177, 167, 167);
+}
+.container
+{
+    display:grid;
+   /*grid-template-columns: auto auto auto; */
+   /*flex works in one direction either horizontal or vetical*/
+    grid-template-columns:repeat(12,1fr);
+    grid-template-rows:repeat(6,1fr);
+    height:300px;
+    border:2px solid black;
+    background-color: antiquewhite;
+    width:100%;
+}
+.row1, .row2, .row3
+{
+    border:1px dotted black;
+}
+.row1{
+  grid-row: 1/2;
+  grid-column: 1/13;
+  height:70px;
+  background-color: black;
+  color:white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  /*
+    grid-column: 3/7;
+    grid-row:1/2;
+  
+    grid-column-start: 3;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 2;
+ 
+    background-color: crimson;
+    color:white;
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 2;
+    border:1px dotted black;
+     */
+}
+
+.row2
+{
+  grid-row: 2/3;
+  grid-column: 1/13;
+  height:60px;
+  background-color:rgb(15,17,17);
+  color:white;
+  border: 1px solid black;
+}
+.row3
+{
+  grid-row: 3/4;
+  grid-column: 1/13;
+  height:200px;
+  background-color: rgb(238, 171, 146);
+  color:black;
+  border: 1px solid black;
+}
+.row4
+{
+  grid-row: 4/5;
+  grid-column: 1/13;
+  height:400px;
+  background-color: cornsilk;
+  color:black;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.row41, .row42 ,.row43 ,.row44
+{
+height: 300px;
+width: 250px;
+border:1px solid black;
+}
+.row41
+{
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+  
+}
+.row411, .row412, .row413 , .row414
+{
+  background-color:whitesmoke;
+  border:1px solid black;
+  padding: 10px;
+}
