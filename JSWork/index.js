@@ -124,9 +124,79 @@ console.log(res);
 */
 
 //DOM
-console.log("hello world");
-let parent=document.getElementsByClassName("parent");
-console.log(parent);
-parent[0].innerHTML="<h2 sttyle=color:red>data has changed</h2>";
+
+// console.log("hello world");
+// const div=document.getElementsByClassName("parent");
+// console.log(div);
+/*
+// div[0].innerText="Hello JS";
+//to add the style
+//div[0].innerHTML="<h2 style=color:red>Hello JS</h2>";
+const h1=document.createElement("h1");
+console.log(h1);
+h1.innerText="ABESEC";
+console.log(h1);
+h1.style.backgroundColor="cyan";
+h1.style.color="red";
+h1.style.padding="20px";
+h1.style.margin="300px";
+div[0].appendChild(h1);
+//How to add image
+const img=document.createElement("img");
+img.src="./profile.jpg";
+console.log(img);
+img.setAttribute("height","300");
+img.setAttribute("width","300px");
+div[0].appendChild(img);
+div[0].removeChild(img); //to remove the content or the child
+*/
+
+/*
+function getData()
+{
+    console.log("Hi,get the data function");
+    div[0].innerHTML="<h2 style=color:red>Hi,inside getdata function</h2>";
+   // div[0].innerText="Hi the data is here";
+}
+
+const button=document.getElementsByClassName("btn");
+console.log(button);
+button[0].addEventListener("click",getData);
+*/
+
+
+
+/*
+const promise=new Promise((resolve,reject)=>
+{
+    let a=5;
+    if(a>10) 
+    {
+        resolve("Accepeted");
+    }
+    else
+    {
+        reject("Not Accepted");
+    }
+});
+promise.then((msg)=>{console.log(msg)})
+.catch((error)=>{console.log(error)})
+.finally(()=>{console.log("All resources have closed")});
+//then means successfully done 
+*/
+
+
+/*
+const promise2=new Promise((resolve,reject)=>
+{
+    resolve({name:"Akshita",Stack:"MERN Stack"});
+});
+promise2.then((data)=>
+{console.log("Hi,"+data.name +"!")}).catch(x=>{console.log(x)});
+ */
+
+const response=fetch("https://dummyjson.com/products");
+response.then((data)=>{console.log(data)});
+data.json().then((res)=>{console.log(res)});
 
 
