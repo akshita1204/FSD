@@ -1,46 +1,51 @@
 import React from 'react'
 import './student.css'
-function Student(props) {
+function Student({data}) {
   return (
     <div className='icard'>
 
-        <table>
+{/* {JSON.stringify(data)} */}
+
+        {<table>
             <tbody>
                 <tr>
                     <td colSpan={2}>
-                      {props.college}
+                      {data.college}
                     </td>
                 </tr>
 
                 <tr>
                     <td colSpan={2}>
-                      {props.pic}
+                      {data.pic}
                     </td>
                 </tr>
                 
                    <tr>
                     <td>Name</td>
-                    <td>{props.name}</td>
+                    <td>{data.name}</td>
                     </tr>
 
                     <tr>
                     <td>Branch</td>
-                    <td>{props.branch}</td>
+                    <td>{data.branch}</td>
                     </tr>
 
                     <tr>
                     <td>RollNo.</td>
-                    <td>{props.roll}</td>
+                    <td>{data.roll}</td>   
                     </tr>
 
                     <tr>
                     <td>Section:</td>
-                    <td>{props.section}</td>
+                    <td>{data.section}</td>
                     </tr>
             </tbody>
-        </table>
+        </table> }
     </div>
   )
 }
-
+// Student.defaultProps=
+// {
+//   college:"AKGEC"
+// }
 export default Student
