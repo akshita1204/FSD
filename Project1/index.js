@@ -26,12 +26,8 @@ submit.addEventListener("click",function(){
                 }
                 else if(img.src.includes("2.png")) {
                     img.src = "1.png"; 
-                }
-                
-                
+                }   
             });
-
-
             imageContainer.appendChild(img); 
             submit.style.display="none";
             numberinput.style.display="none";
