@@ -4,6 +4,7 @@ import photo from "./assets/profile.jpg"
 import UseStudentState from './UseStudentState'
 import Imagemanipulation from './imagemanipulation'
 import MyUseEffect from '../MyUseEffect'
+import UseFetchAPI from './UseFetchAPI'
 export default function App() {
   const h1 = <h1>Hello!</h1>
   const mystyle = {
@@ -32,7 +33,8 @@ export default function App() {
       <div>
         {/* <UseStudentState/> */}
         {/* <Imagemanipulation/> */}
-        <MyUseEffect/>
+        {/* <MyUseEffect/> */}
+       <UseFetchAPI/>
       </div>
     </div>
     
