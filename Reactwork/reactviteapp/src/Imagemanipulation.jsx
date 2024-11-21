@@ -29,9 +29,9 @@ function Imagemanipulation() {
    setBlue(Math.random() * 255)
  }
   return (
-    <div style={{border:'2px solid black',height:'500px', width:'700px', marginLeft:'300px',marginRight:'200px', backgroundColor:`rgb(${red},${green},${blue})`}}>
+    <div style={{border:'2px solid black',height:'500px', width:'700px', marginLeft:'300px',marginRight:'200px',backgroundColor:'brown' }}>
     
-    <div style={{backgroundColor:'brown',border:'1px solid black',height:'200px',width:'200px',marginLeft:'250px',marginTop:'150px'}}>
+    <div style={{backgroundColor:`rgb(${red},${green},${blue})`,border:'1px solid black',height:'200px',width:'200px',marginLeft:'250px',marginTop:'150px'}}>
         <img src={cat} style={{transform:`rotate(${rotateimg}deg)`}}  height={height} width={width} ></img>
     </div>
 
@@ -47,5 +47,4 @@ function Imagemanipulation() {
 
   )
 }
-
 export default Imagemanipulation

@@ -3,6 +3,7 @@ import Student from './Student'
 import photo from "./assets/profile.jpg"
 import UseStudentState from './UseStudentState'
 import Imagemanipulation from './imagemanipulation'
+import MyUseEffect from '../MyUseEffect'
 export default function App() {
   const h1 = <h1>Hello!</h1>
   const mystyle = {
@@ -30,7 +31,8 @@ export default function App() {
       <h1>Hello using useSatte Hooke</h1>
       <div>
         {/* <UseStudentState/> */}
-        <Imagemanipulation/>
+        {/* <Imagemanipulation/> */}
+        <MyUseEffect/>
       </div>
     </div>
     
