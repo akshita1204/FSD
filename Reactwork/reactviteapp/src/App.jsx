@@ -5,6 +5,8 @@ import UseStudentState from './UseStudentState'
 import Imagemanipulation from './imagemanipulation'
 import MyUseEffect from '../MyUseEffect'
 import UseFetchAPI from './UseFetchAPI'
+import Login from './Login'
+import Registration from './Registration'
 export default function App() {
   const h1 = <h1>Hello!</h1>
   const mystyle = {
@@ -34,7 +36,9 @@ export default function App() {
         {/* <UseStudentState/> */}
         {/* <Imagemanipulation/> */}
         {/* <MyUseEffect/> */}
-       <UseFetchAPI/>
+        {/* <UseFetchAPI/> */}
+        <Login></Login>
+        <Registration></Registration>
       </div>
     </div>
     
