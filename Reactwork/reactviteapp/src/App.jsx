@@ -37,8 +37,8 @@ export default function App() {
         {/* <Imagemanipulation/> */}
         {/* <MyUseEffect/> */}
         {/* <UseFetchAPI/> */}
-        <Login></Login>
-        {/* <Registration></Registration> */}
+        {/* <Login></Login> */}
+        <Registration></Registration> 
       </div>
     </div>
     
