@@ -38,7 +38,7 @@ export default function App() {
         {/* <MyUseEffect/> */}
         {/* <UseFetchAPI/> */}
         <Login></Login>
-        <Registration></Registration>
+        {/* <Registration></Registration> */}
       </div>
     </div>
     
