@@ -8,50 +8,45 @@ import UseFetchAPI from './UseFetchAPI'
 import Login from './Login'
 import Registration from './Registration'
 import { useState } from 'react';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
 export default function App() {
 
   const[rdata,setrdata]=useState();
 
   
 
-  const h1 = <h1>Hello!</h1>
-  const mystyle = {
-    color: 'red',
-    backgroundColor:'yellow'
-  } 
-  const studentdata=[
-    {
-      name:"Rahul",
-      branch:"CSE",
-      roll:"12",
-      section:"B",
-      },
-      {
-        name:"Akash",
-        branch:"CSE",
-        roll:"11",
-        section:"B"
-        },    
-  ]
+  // const h1 = <h1>Hello!</h1>
+  // const mystyle = {
+  //   color: 'red',
+  //   backgroundColor:'yellow'
+  // } 
+
+  // const studentdata=[
+  //   {
+  //     name:"Rahul",
+  //     branch:"CSE",
+  //     roll:"12",
+  //     section:"B",
+  //     },
+  //     {
+  //       name:"Akash",
+  //       branch:"CSE",
+  //       roll:"11",
+  //       section:"B"
+  //       },    
+  // ]
 
   return (
 
     <div>
-      <div>{JSON.stringify(rdata)}</div>
-
-      <h1>Hello using useSatte Hooke</h1>
-      <div>
-        {/* <UseStudentState/> */}
-        {/* <Imagemanipulation/> */}
-        {/* <MyUseEffect/> */}
-        {/* <UseFetchAPI/> */}
-        {/* <Login></Login> */}
-        <Registration regData={setrdata}></Registration> 
-      </div>
-      <div>
-        <h2>Login Form</h2>
-        <Login reg={rdata}></Login>
-      </div>
+      <BrowserRouter>
+      <Routes>
+        <Route path='/login' element={<Login reg={rdata}></Login>}/>
+        <Route path='/register' element={<Registration regData={setrdata}></Registration>} />
+      </Routes>
+      </BrowserRouter>
+       
+      
     </div>
     
     // <div style={{backgroundColor:'cyan'}}>
@@ -84,5 +79,5 @@ export default function App() {
     // </div>
     // {/* <div><Student></Student></div> }*/
     // </div>
-  )
+  );
 }
