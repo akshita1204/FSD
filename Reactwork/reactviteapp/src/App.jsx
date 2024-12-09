@@ -7,7 +7,13 @@ import MyUseEffect from '../MyUseEffect'
 import UseFetchAPI from './UseFetchAPI'
 import Login from './Login'
 import Registration from './Registration'
+import { useState } from 'react';
 export default function App() {
+
+  const[rdata,setrdata]=useState();
+
+  
+
   const h1 = <h1>Hello!</h1>
   const mystyle = {
     color: 'red',
@@ -31,6 +37,8 @@ export default function App() {
   return (
 
     <div>
+      <div>{JSON.stringify(rdata)}</div>
+
       <h1>Hello using useSatte Hooke</h1>
       <div>
         {/* <UseStudentState/> */}
@@ -38,7 +46,11 @@ export default function App() {
         {/* <MyUseEffect/> */}
         {/* <UseFetchAPI/> */}
         {/* <Login></Login> */}
-        <Registration></Registration> 
+        <Registration regData={setrdata}></Registration> 
+      </div>
+      <div>
+        <h2>Login Form</h2>
+        <Login reg={rdata}></Login>
       </div>
     </div>
     
