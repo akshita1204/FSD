@@ -10,6 +10,7 @@ import Registration from './Registration'
 import { useState } from 'react';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import MainLayout from './MainLayout'
+import DashBoard from './DashBoard'
 export default function App() {
 
   const[rdata,setrdata]=useState();
@@ -46,6 +47,9 @@ export default function App() {
         <Route path='/login' element={<Login reg={rdata}></Login>}/>
         <Route path='/register' element={<Registration regData={setrdata}></Registration>} />
         </Route>
+
+        <Route path='/dashboard' element={<DashBoard/>}></Route>
+
       </Routes>
       </BrowserRouter>
        

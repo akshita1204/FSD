@@ -1,11 +1,12 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
-
+import { useNavigate } from 'react-router-dom';
 function Login({reg}) { //registeration ka data as on object 
 
 const[email,setEmail]=useState();
 const[password,setPassword]=useState();
+const navigate=useNavigate();
 
  function verifyData()
  {
@@ -15,6 +16,7 @@ const[password,setPassword]=useState();
    if(email==reg.email) 
    {
     alert("User is valid");
+    navigate('/dashboard');
    }
    else
    {

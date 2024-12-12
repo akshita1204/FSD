@@ -16,7 +16,8 @@ function MainLayout() {
             </ul>
         </nav>
 
-    <Outlet/>
+    <Outlet/> 
+    {/* //React Router allows you to define nested routes, meaning you can have routes inside other routes */}
 
 
 
