@@ -42,9 +42,10 @@ export default function App() {
     <div>
       <BrowserRouter>
       <Routes>
-        <Route path='/' element={<MainLayout></MainLayout>}/>
+        <Route path='/' element={<MainLayout></MainLayout>}>
         <Route path='/login' element={<Login reg={rdata}></Login>}/>
         <Route path='/register' element={<Registration regData={setrdata}></Registration>} />
+        </Route>
       </Routes>
       </BrowserRouter>
        

@@ -12,9 +12,15 @@ function MainLayout() {
                 <li>
                 <Link to='register/'>Register</Link>
                 </li>
-                
+
             </ul>
         </nav>
+
+    <Outlet/>
+
+
+
+
     </div>
   )
 }
