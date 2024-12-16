@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { mycontext } from '../AppContext';
 
 function Child1Context() {
+    const child1context=useContext(mycontext);
   return (
-    <div>Child1Context</div>
+    <div>
+        Name:{child1context.name}
+    </div>
   )
 }
 
