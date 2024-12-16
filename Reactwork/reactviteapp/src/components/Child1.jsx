@@ -1,8 +1,11 @@
 import React from 'react'
 
-function Child1() {
+function Child1({child1data}) {
   return (
-    <div>Child1</div>
+    <div>
+        Name:{child1data.name}
+
+    </div>
   )
 }
 
