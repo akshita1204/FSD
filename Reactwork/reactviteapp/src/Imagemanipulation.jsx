@@ -47,4 +47,4 @@ function Imagemanipulation() {
 
   )
 }
-export default Imagemanipulation
+export default Imagemanipulation; 
