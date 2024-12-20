@@ -40,7 +40,7 @@ function Imagemanipulation() {
      <button id='btn' onClick={enhanceHeight}>Enhance Height</button>
      <button id='btn' onClick={enhanceWidth}>Enhance Width</button>
      <button id='btn' onClick={rotateImage}>Rotate</button>
-     <button id='btn' onClick={changeBackground}>Change Background Color</button> 
+     <button id='btn' onClick={changeBackground}>Change Background Color</button>
     </div>
 
     </div>
