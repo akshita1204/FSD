@@ -10,3 +10,8 @@ fsp.then(()=>
 {
     console.log("Finally closes all the resousurces successfully");
 })
+
+function readFileAsync()
+{
+    
+}
