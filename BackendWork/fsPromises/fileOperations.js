@@ -11,7 +11,12 @@ fsp.then(()=>
     console.log("Finally closes all the resousurces successfully");
 })
 
-function readFileAsync()
+
+//second methood using async await 
+async function readFileAsync()
 {
-    
+    const data=await promise.readFile('data.txt',{encoding:'utf-8'});
+    console.log(data);
 }
+
+readFileAsync();
