@@ -3,7 +3,7 @@ const PORT=2527;
 const server=http.createServer((req,res)=>{
 
     console.log("Inside server");
-  res.write("Welcome to the Node Server");
+  res.write("Welcome to the Node Server ");
   res.end("server ended")
 })
 server.listen(PORT,()=>
