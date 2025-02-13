@@ -1,0 +1,16 @@
+[
+{
+    "name":"A",
+    "rollno":"1",
+    "branch":"CSE",
+    "section":"A",
+    "college":"ABES"
+},
+{
+    "name":"B",
+    "rollno":"2",
+    "branch":"CSE",
+    "section":"A",
+    "college":"ABES"
+}
+]
