@@ -3,8 +3,9 @@ const PORT=2527;
 const server=http.createServer((req,res)=>{
 
     console.log("Inside server");
-  res.write("Welcome to the Node Server ");
-  res.end("server ended")
+    res.setHeader('Content-type',"text/html"); //to use the html tag i
+    res.write("<h2 style='background:yellow'>Welcome to the Node Server</h2> ");
+    res.end("<h2>server ended</h2>")
 })
 server.listen(PORT,()=>
 {
