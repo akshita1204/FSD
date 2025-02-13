@@ -5,8 +5,8 @@ fsp.then(()=>
     console.log("data written successfully");
 }).catch((err)=>
 {
-
+    console.log("Error while writing the data");
 }).finally(()=>
 {
-    
+    console.log("Finally closes all the resousurces successfully");
 })
