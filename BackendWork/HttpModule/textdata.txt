@@ -1,0 +1,6 @@
+Student Name: ABC
+Age: 21
+Major: CSE
+University: ABC University
+Year: 3rd Year
+CGPA: 8.75
