@@ -13,9 +13,14 @@ const server=http.createServer((req,res)=>
     req.on('data', chunk=>{
         body+=chunk;
     })
+    req.on('end',()=>
+    {
+        console.log(body)
+    })
+
     res.end(JSON.stringify({"message":"/register api hit successfully"}));
  }
- res.end("Welcome to the Server");
+ //res.end("Welcome to the Server");
 });
 server.listen(PORT,()=>
 {
