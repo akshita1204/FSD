@@ -13,9 +13,11 @@ const server=http.createServer((req,res)=>
     req.on('data', chunk=>{
         body+=chunk;
     })
-    req.on('end',()=>
+    req.on('end',async ()=>
     {
-        console.log(body)
+       const {name,email,password} = JSON.parse(body);
+       console.log(name)
+       await fs.writeFile('studentss.json',JSON.stringify({name,email,password}));
     })
 
     res.end(JSON.stringify({"message":"/register api hit successfully"}));
