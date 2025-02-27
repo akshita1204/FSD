@@ -19,12 +19,50 @@ const server=http.createServer((req,res)=>
        console.log(name)
        const fdata=await fs.readFile('studentss.json',{encoding:'utf-8'});
        arr=JSON.parse(fdata);
-       arr.push({name,email,password});
-      await fs.writeFile('studentss.json',JSON.stringify(arr,null,2));
-    })
+       //to check the duplicacy of data
+       const result=arr.find(ele=>ele.email==email);
+       if(result)  //email already exists
+       {
+          res.setHeader('Content-Type','application/json');
+          return res.end(JSON.stringify({"message":"Email Exists!"}))
+       }
+       else
+       {
+        arr.push({name,email,password});
+        await fs.writeFile('studentss.json',JSON.stringify(arr,null,2));
+        res.end(JSON.stringify({"message":"Registration successfully"}));
+       }
 
-    res.end(JSON.stringify({"message":"/register api hit successfully"}));
+    })
  }
+
+ //For the login
+ if(req.url=='/login' && req.method=='POST')
+ {
+    let body='';
+    let arr=[];
+    req.on('data', chunk=>{
+        body+=chunk;
+    })
+    req.on('end',async()=>
+    {
+        const {email,password} = JSON.parse(body);
+        const fdata=await fs.readFile('studentss.json',{encoding:'utf-8'});
+        arr=JSON.parse(fdata);
+        const result=arr.find(ele=>ele.email==email && password==ele.password);
+        if(result)
+        {
+          res.setHeader('Content-Type','application/json');
+          res.end(JSON.stringify({"message":"Login successfully"}));
+        }
+        else
+        {
+            await fs.writeFile('studentss.json',JSON.stringify(arr,null,2));
+            res.end(JSON.stringify({"message":"Login Failed"}));
+        }
+    })
+ }
+
  //res.end("Welcome to the Server");
 });
 server.listen(PORT,()=>
